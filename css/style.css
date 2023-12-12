@@ -19,3 +19,11 @@
 .barrato {
   text-decoration: line-through;
 }
+
+li {
+  margin: 1rem 0;
+}
+
+i:hover {
+  cursor: pointer;
+}

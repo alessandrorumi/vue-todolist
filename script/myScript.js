@@ -15,7 +15,7 @@ createApp({
   data() {
 
     return {
-      
+
       todos: [
         {
             text: 'Fare i compiti',
@@ -35,6 +35,11 @@ createApp({
   },
 
   methods: {
+
+    removeTodo(i) {
+      // console.log('click su elemento x')
+      this.todos.splice(i, 1)
+    }
 
   }
 
