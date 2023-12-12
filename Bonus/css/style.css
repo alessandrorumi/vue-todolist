@@ -18,12 +18,22 @@
 
 .barrato {
   text-decoration: line-through;
+  text-decoration-thickness: 0.1rem;
 }
 
 li {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
-i:hover {
+i:hover,
+li:hover {
   cursor: pointer;
+}
+
+.fa-xmark {
+  margin-left: 3rem;
+}
+
+h3 {
+  margin-top: 1rem;
 }

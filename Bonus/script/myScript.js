@@ -40,6 +40,17 @@ createApp({
     addTodo() {
       this.todos.push({ text: this.userInput.text });
       this.userInput = { text: '' };
+    },
+
+    toggleTodo(i) {
+      // if (this.todos[i].done === false) {
+      //   this.todos[i].done = true
+      // } else {
+      //   this.todos[i].done = false
+      // }
+      if (this.todos[i] !== undefined) {
+        this.todos[i].done = !this.todos[i].done;
+      }
     }
 
   }
