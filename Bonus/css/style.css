@@ -26,6 +26,12 @@ h1 {
 
 h3 {
   margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+h5 {
+  color: red;
+  text-align: center;
 }
 
 .input-send {
@@ -59,6 +65,7 @@ li {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 li:first-child {
@@ -69,5 +76,9 @@ i:hover,
 li:hover {
   cursor: pointer;
   background-color: white;
+}
+
+.fa-xmark {
+  padding: .75rem;
 }
 

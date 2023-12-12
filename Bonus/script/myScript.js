@@ -6,6 +6,8 @@ createApp({
 
     return {
 
+      error: false,
+
       userInput: 
       { 
         text: "",
@@ -38,8 +40,13 @@ createApp({
     },
 
     addTodo() {
-      this.todos.push({ text: this.userInput.text });
-      this.userInput = { text: '' };
+      if (this.userInput.text.length < 5) {
+        this.error = true;
+      } else {
+        this.todos.push({ text: this.userInput.text });
+        this.userInput = { text: '' };
+        this.error = false;
+      }
     },
 
     toggleTodo(i) {
