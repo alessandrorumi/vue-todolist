@@ -20,16 +20,23 @@
   
       <div class="input-send">
         <input type="text" placeholder="Inserisci un nuovo task" v-model="userInput.text" @keyup.enter="addTodo">
-        <button @click="addTodo">AGGIUNGI</button>
+        <button @click="addTodo">Aggiungi</button>
       </div>
   
-      <ul v-if="todos.length > 0">
-        <li :class="todos[i].done === true ? 'barrato' : ''" v-for="(todo, i) in todos" @click="toggleTodo(i)">
-          {{ todos[i].text }} <i class="fa-solid fa-xmark" style="color: #000000;" @click="removeTodo(i)"></i>
-        </li>
-      </ul>
+      <div class="content">
 
-      <h3 v-else>Non ci sono task</h3>
+        <ul v-if="todos.length > 0">
+          <li v-for="(todo, i) in todos" @click="toggleTodo(i)">
+            <div :class="todos[i].done === true ? 'barrato' : ''">
+              {{ todo.text }}
+            </div>
+            <i class="fa-solid fa-xmark" style="color: #000000;" @click="removeTodo(i)"></i>
+          </li>
+        </ul>
+  
+        <h3 v-else>Non ci sono task</h3>
+  
+      </div>
 
     </div>
 
