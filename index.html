@@ -19,13 +19,13 @@
       <h1>Lista</h1>
   
       <div class="input-send">
-        <input type="text" placeholder="Inserisci un nuovo task">
-        <button>INSERISCI</button>
+        <input type="text" placeholder="Inserisci un nuovo task" v-model="userInput.text">
+        <button @click="addTodo">AGGIUNGI</button>
       </div>
   
       <ul>
         <li :class="todos[i].done === true ? 'barrato' : ''" v-for="(todo, i) in todos">
-          {{todos[i].text}} <i class="fa-solid fa-xmark" style="color: #000000; "@click="removeTodo(i)"></i >
+          {{ todos[i].text }} <i class="fa-solid fa-xmark" style="color: #000000; "@click="removeTodo(i)"></i>
         </li>
       </ul>
 

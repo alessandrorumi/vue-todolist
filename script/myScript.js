@@ -16,6 +16,12 @@ createApp({
 
     return {
 
+      userInput: 
+      { 
+        text: "",
+        done: false 
+      },
+
       todos: [
         {
             text: 'Fare i compiti',
@@ -39,6 +45,11 @@ createApp({
     removeTodo(i) {
       // console.log('click su elemento x')
       this.todos.splice(i, 1)
+    },
+
+    addTodo() {
+      this.todos.push({ text: this.userInput.text });
+      this.userInput = { text: '' };
     }
 
   }
