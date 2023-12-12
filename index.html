@@ -11,7 +11,24 @@
 
 <body>
 
-  <div id="app"></div>
+  <div id="app">
+
+    <div class="container">
+      
+      <h1>Lista</h1>
+  
+      <div class="input-send">
+        <input type="text" placeholder="Inserisci un nuovo task">
+        <button>INSERISCI</button>
+      </div>
+  
+      <ul>
+        <li :class="todos[i].done === true ? 'barrato' : ''" v-for="(todo, i) in todos">{{todos[i].text}}</li >
+      </ul>
+
+    </div>
+
+  </div>
 
   
   <script src="script/myScript.js"></script>
