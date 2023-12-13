@@ -30,8 +30,8 @@
       <div class="content">
 
         <ul v-if="todos.length > 0">
-          <li v-for="(todo, i) in todos" @click="toggleTodo(i)">
-            <div :class="todos[i].done === true ? 'barrato' : ''">
+          <li v-for="(todo, i) in todos">
+            <div class="todo-text" :class="todos[i].done ? 'barrato' : ''"  @click="toggleTodo(i)">
               {{ todo.text }}
             </div>
             <i class="fa-solid fa-xmark" style="color: #000000; font-size: 1.5rem;" @click="removeTodo(i)"></i>

@@ -78,6 +78,10 @@ li:hover {
   background-color: white;
 }
 
+.todo-text {
+  width: 100%;
+}
+
 .fa-xmark {
   padding: .75rem;
 }
